@@ -25,7 +25,7 @@ whitespace            [ \t\n\r]
 <COMMENT>\\class                            { result += "@class"; BEGIN COMMENT; }
 <COMMENT>\\brief                            { result += "@brief"; BEGIN COMMENT; }
 <COMMENT>\\TODO                             { result += "@TODO"; BEGIN COMMENT; }
-<COMMENT>{whitespace}                       { result +=yytext; }
+<COMMENT>{whitespace}                       { result += yytext; }
 <COMMENT>.                                  { result += yytext; BEGIN COMMENT; }
 <INITIAL>{whitespace}                       { result += yytext; BEGIN INITIAL; }
 <INITIAL>.                                  { result += yytext; BEGIN INITIAL; }
